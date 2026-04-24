@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Maymuna's Cafe Surat</title>
+    <meta name="description" content="Explore the exquisite menu of Maymuna's Cafe in Surat. From specialty coffee and herbal teas to artisan pastries and local Surat delights.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D241E',
+                        secondary: '#C8A97E',
+                        accent: '#E5C299',
+                        cream: '#FDFBF7',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-cream selection:bg-secondary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-white shadow-md">
+        <a href="index.html" class="text-2xl md:text-3xl font-serif font-bold text-primary tracking-tighter">
+            MAYMUNA'S <span class="text-secondary">CAFE</span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 items-center">
+            <a href="index.html" class="font-medium text-primary hover:text-secondary transition-colors">Home</a>
+            <a href="menu.html" class="font-medium text-secondary hover:text-secondary transition-colors">Menu</a>
+            <a href="about.html" class="font-medium text-primary hover:text-secondary transition-colors">About</a>
+            <a href="gallery.html" class="font-medium text-primary hover:text-secondary transition-colors">Gallery</a>
+            <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition-all transform hover:scale-105">Visit Us</a>
+        </div>
+        
+        <!-- Mobile Toggle -->
+        <button id="menu-btn" class="md:hidden text-primary">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-primary text-white translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 text-2xl font-serif">
+        <button id="close-btn" class="absolute top-6 right-6">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <a href="index.html" class="hover:text-secondary">Home</a>
+        <a href="menu.html" class="text-secondary hover:text-secondary">Menu</a>
+        <a href="about.html" class="hover:text-secondary">About</a>
+        <a href="gallery.html" class="hover:text-secondary">Gallery</a>
+        <a href="contact.html" class="hover:text-secondary">Contact</a>
+    </div>
+
+    <!-- Hero Header -->
+    <section class="pt-32 pb-16 px-6 bg-primary text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">Our <span class="text-secondary">Menu</span></h1>
+            <p class="text-white/60 text-lg md:text-xl fade-in" style="transition-delay: 0.2s;">A symphony of flavors, locally sourced and globally inspired. Every dish tells a story of quality.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-24 px-6 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Category Tabs (Visual only) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-20">
+                <button class="px-8 py-3 rounded-full bg-primary text-white font-semibold transition-all">All</button>
+                <button class="px-8 py-3 rounded-full bg-white text-primary border border-primary/10 hover:border-secondary hover:text-secondary font-semibold transition-all">Coffee</button>
+                <button class="px-8 py-3 rounded-full bg-white text-primary border border-primary/10 hover:border-secondary hover:text-secondary font-semibold transition-all">Bakery</button>
+                <button class="px-8 py-3 rounded-full bg-white text-primary border border-primary/10 hover:border-secondary hover:text-secondary font-semibold transition-all">Surat Specials</button>
+                <button class="px-8 py-3 rounded-full bg-white text-primary border border-primary/10 hover:border-secondary hover:text-secondary font-semibold transition-all">Breakfast</button>
+            </div>
+
+            <!-- Specialty Coffee -->
+            <div class="mb-24">
+                <div class="flex items-center space-x-4 mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary font-serif">Specialty Coffee</h2>
+                    <div class="h-px flex-1 bg-primary/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
+                    <!-- Item 1 -->
+                    <div class="flex items-start space-x-6 group fade-in">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1541167760496-162955ed8a9f?q=80&w=1972&auto=format&fit=crop" alt="Espresso" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Double Espresso</h4>
+                                <span class="text-secondary font-bold">₹180</span>
+                            </div>
+                            <p class="text-text-light text-sm">Rich, intense double shot of our signature house blend.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="flex items-start space-x-6 group fade-in" style="transition-delay: 0.1s;">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1974&auto=format&fit=crop" alt="Flat White" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Velvet Flat White</h4>
+                                <span class="text-secondary font-bold">₹260</span>
+                            </div>
+                            <p class="text-text-light text-sm">Silky micro-foam poured over a rich ristretto base.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="flex items-start space-x-6 group fade-in" style="transition-delay: 0.2s;">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=2071&auto=format&fit=crop" alt="Cold Brew" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Surat Cold Brew</h4>
+                                <span class="text-secondary font-bold">₹320</span>
+                            </div>
+                            <p class="text-text-light text-sm">18-hour steep, served over ice with a hint of cinnamon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artisan Bakery -->
+            <div class="mb-24">
+                <div class="flex items-center space-x-4 mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary font-serif">Artisan Bakery</h2>
+                    <div class="h-px flex-1 bg-primary/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
+                    <!-- Item 1 -->
+                    <div class="flex items-start space-x-6 group fade-in">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop" alt="Croissant" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Butter Croissant</h4>
+                                <span class="text-secondary font-bold">₹150</span>
+                            </div>
+                            <p class="text-text-light text-sm">Classic French-style flaky pastry with high-fat butter.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="flex items-start space-x-6 group fade-in" style="transition-delay: 0.1s;">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1989&auto=format&fit=crop" alt="Cheesecake" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Burnt Cheesecake</h4>
+                                <span class="text-secondary font-bold">₹380</span>
+                            </div>
+                            <p class="text-text-light text-sm">Basque-style cheesecake with a creamy, molten center.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="flex items-start space-x-6 group fade-in" style="transition-delay: 0.2s;">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop" alt="Sourdough" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Olive Focaccia</h4>
+                                <span class="text-secondary font-bold">₹220</span>
+                            </div>
+                            <p class="text-text-light text-sm">Herb-infused bread with kalamata olives and sea salt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surat Specials -->
+            <div class="mb-24">
+                <div class="flex items-center space-x-4 mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary font-serif">Surat Specials</h2>
+                    <div class="h-px flex-1 bg-primary/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
+                    <!-- Item 1 -->
+                    <div class="flex items-start space-x-6 group fade-in">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080&auto=format&fit=crop" alt="Masala Bun" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Surti Masala Bun</h4>
+                                <span class="text-secondary font-bold">₹190</span>
+                            </div>
+                            <p class="text-text-light text-sm">Spiced butter-toasted bun with our secret cafe masala.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="flex items-start space-x-6 group fade-in" style="transition-delay: 0.1s;">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1544787210-2211d44b565a?q=80&w=1921&auto=format&fit=crop" alt="Rose Milk" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">Rose Garden Cooler</h4>
+                                <span class="text-secondary font-bold">₹280</span>
+                            </div>
+                            <p class="text-text-light text-sm">Refreshing rose-infused cold milk with chia seeds.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="flex items-start space-x-6 group fade-in" style="transition-delay: 0.2s;">
+                        <div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=2070&auto=format&fit=crop" alt="Veg Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="flex-1 border-b border-dashed border-primary/20 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-primary">The Pal Platter</h4>
+                                <span class="text-secondary font-bold">₹450</span>
+                            </div>
+                            <p class="text-text-light text-sm">Selection of local savory snacks with artisan dips.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Dietary Info -->
+    <section class="py-16 bg-white border-t border-primary/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="flex flex-wrap justify-center gap-12 text-primary/60 font-medium">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="leaf" class="text-green-500 w-5 h-5"></i>
+                    <span>Vegetarian Options</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="wheat-off" class="text-orange-500 w-5 h-5"></i>
+                    <span>Gluten Free Available</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="milk-off" class="text-blue-400 w-5 h-5"></i>
+                    <span>Vegan/Oat Milk Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="text-3xl font-serif font-bold text-white mb-6 block">MAYMUNA'S <span class="text-secondary">CAFE</span></a>
+                    <p class="text-white/60 max-w-sm mb-8">Elevating the coffee experience in Surat through passion, quality, and a commitment to excellence.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-white/60">
+                        <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Social</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-10 text-center text-white/40 text-sm">
+                <p>&copy; <span id="current-year"></span> Maymuna's Cafe Surat. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maymuna's Cafe | Premium Coffee & Bakery in Surat, Gujarat</title>
+    <meta name="description" content="Welcome to Maymuna's Cafe, the finest spot for artisan coffee, fresh pastries, and a cozy atmosphere in Surat, Gujarat. Experience the taste of excellence.">
+    <meta name="keywords" content="Maymuna's Cafe, Cafe in Surat, Best Coffee Surat, Surat Bakery, Gujarat Cafe, Premium Cafe Surat">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maymunascafe.com/">
+    <meta property="og:title" content="Maymuna's Cafe | Premium Coffee & Bakery in Surat">
+    <meta property="og:description" content="Experience the finest artisan coffee and pastries in the heart of Surat.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D241E',
+                        secondary: '#C8A97E',
+                        accent: '#E5C299',
+                        cream: '#FDFBF7',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-cream selection:bg-secondary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-transparent text-white">
+        <a href="index.html" id="nav-logo" class="text-2xl md:text-3xl font-serif font-bold tracking-tighter transition-colors">
+            MAYMUNA'S <span class="text-secondary">CAFE</span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div id="nav-links" class="hidden md:flex space-x-8 items-center">
+            <a href="index.html" class="font-medium hover:text-secondary transition-colors">Home</a>
+            <a href="menu.html" class="font-medium hover:text-secondary transition-colors">Menu</a>
+            <a href="about.html" class="font-medium hover:text-secondary transition-colors">About</a>
+            <a href="gallery.html" class="font-medium hover:text-secondary transition-colors">Gallery</a>
+            <a href="contact.html" class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-white hover:text-primary transition-all transform hover:scale-105">Visit Us</a>
+        </div>
+        
+        <!-- Mobile Toggle -->
+        <button id="menu-btn" class="md:hidden">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-primary text-white translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 text-2xl font-serif">
+        <button id="close-btn" class="absolute top-6 right-6">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <a href="index.html" class="hover:text-secondary">Home</a>
+        <a href="menu.html" class="hover:text-secondary">Menu</a>
+        <a href="about.html" class="hover:text-secondary">About</a>
+        <a href="gallery.html" class="hover:text-secondary">Gallery</a>
+        <a href="contact.html" class="hover:text-secondary">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop" alt="Maymuna's Cafe Aesthetic" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl drop-shadow-2xl">
+            <h1 class="text-5xl md:text-8xl text-white font-bold mb-6 fade-in">Experience Coffee <br> <span class="text-secondary italic">Redefined.</span></h1>
+            <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto fade-in" style="transition-delay: 0.2s;">Nestled in the heart of Surat, we blend artisan brewing with a touch of elegance. Your perfect escape awaits.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center fade-in" style="transition-delay: 0.4s;">
+                <a href="menu.html" class="bg-secondary text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary transition-all shadow-lg">View Menu</a>
+                <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary transition-all">Find Us</a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="text-white w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="py-24 px-6 md:px-20 bg-cream overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <span class="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">Since 2024</span>
+                <h2 class="text-4xl md:text-6xl font-bold text-primary mb-8 leading-tight">Crafting Moments in <br>Every Sip.</h2>
+                <p class="text-text-light text-lg mb-8 leading-relaxed">Maymuna's Cafe isn't just about coffee; it's a celebration of Surat's vibrant culture mixed with global artisan standards. From our hand-picked beans to our freshly baked artisanal breads, every detail is designed to wow your senses.</p>
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <h4 class="text-3xl font-bold text-primary">100%</h4>
+                        <p class="text-text-light">Arabica Beans</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-primary">Daily</h4>
+                        <p class="text-text-light">Fresh Baking</p>
+                    </div>
+                </div>
+                <a href="about.html" class="inline-flex items-center text-primary font-bold border-b-2 border-secondary pb-1 hover:text-secondary transition-all group">
+                    Our Full Story <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+            <div class="relative fade-in" style="transition-delay: 0.3s;">
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop" alt="Coffee Brewing" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl hidden lg:block">
+                    <p class="text-primary italic font-serif text-lg">"The best coffee experience <br>in Surat, period."</p>
+                    <p class="text-secondary font-bold mt-2">— Happy Regular</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu -->
+    <section class="py-24 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Chef's <span class="text-secondary">Specials</span></h2>
+                <p class="text-white/60 max-w-xl mx-auto">Explore our most-loved creations, curated for the true coffee and food connoisseur.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="group fade-in">
+                    <div class="overflow-hidden rounded-2xl mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1541167760496-162955ed8a9f?q=80&w=1972&auto=format&fit=crop" alt="Golden Latte" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">Best Seller</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Signature Golden Latte</h3>
+                    <p class="text-white/60 mb-4">A rich blend of premium arabica, turmeric, and honey with steamed oat milk.</p>
+                    <span class="text-secondary text-xl font-bold">₹345</span>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="group fade-in" style="transition-delay: 0.2s;">
+                    <div class="overflow-hidden rounded-2xl mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop" alt="Surat Sourdough" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Avocado Sourdough Toast</h3>
+                    <p class="text-white/60 mb-4">Freshly baked sourdough topped with smashed avocado, feta, and chili flakes.</p>
+                    <span class="text-secondary text-xl font-bold">₹420</span>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="group fade-in" style="transition-delay: 0.4s;">
+                    <div class="overflow-hidden rounded-2xl mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1559622314-7061879dadc8?q=80&w=1935&auto=format&fit=crop" alt="Dark Chocolate Croissant" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Dark Choco Croissant</h3>
+                    <p class="text-white/60 mb-4">Flaky, buttery pastry filled with Belgian dark chocolate ganache.</p>
+                    <span class="text-secondary text-xl font-bold">₹280</span>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="menu.html" class="bg-secondary text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary transition-all">Explore Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Teaser -->
+    <section class="py-24 px-6 md:px-20 bg-cream">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/2 fade-in">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec418cd9?q=80&w=2071&auto=format&fit=crop" alt="Surat Location" class="rounded-3xl shadow-2xl">
+            </div>
+            <div class="w-full md:w-1/2 fade-in" style="transition-delay: 0.2s;">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">Visit Our Sanctuary in Surat.</h2>
+                <p class="text-text-light text-lg mb-8">Located in the premium district of Surat, our cafe provides a quiet oasis from the city's hustle. Whether you're here for a business meeting, a date, or some solo "me-time," we have the perfect corner for you.</p>
+                <div class="flex items-start space-x-4 mb-6">
+                    <i data-lucide="map-pin" class="text-secondary mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-primary">Our Address</h4>
+                        <p class="text-text-light">102 Royal Arcade, Pal Road, Surat, Gujarat 395009</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i data-lucide="clock" class="text-secondary mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-primary">Opening Hours</h4>
+                        <p class="text-text-light">Mon - Sun: 08:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="text-3xl font-serif font-bold text-white mb-6 block">MAYMUNA'S <span class="text-secondary">CAFE</span></a>
+                    <p class="text-white/60 max-w-sm mb-8">Elevating the coffee experience in Surat through passion, quality, and a commitment to excellence.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-white/60">
+                        <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Newsletter</h4>
+                    <p class="text-white/60 mb-6 text-sm">Join our mailing list for exclusive offers and coffee tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Address" class="bg-white/5 border border-white/10 px-4 py-2 rounded-l-lg w-full focus:outline-none focus:border-secondary">
+                        <button class="bg-secondary px-4 py-2 rounded-r-lg hover:bg-accent transition-colors">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-10 text-center text-white/40 text-sm">
+                <p>&copy; <span id="current-year"></span> Maymuna's Cafe Surat. All Rights Reserved. Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
